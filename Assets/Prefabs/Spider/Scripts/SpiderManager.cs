@@ -67,11 +67,11 @@ public class SpiderManager : MonoBehaviour
 	{
 
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 45 && rPointerParent.gameObject.transform.eulerAngles.x < 90 && rPointerParent.gameObject.transform.eulerAngles.y > 200) {
-			Bonus2.Invoke ();
+			Bonus1.Invoke ();
 			DebugResult = 1;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 0 && rPointerParent.gameObject.transform.eulerAngles.x < 45 && rPointerParent.gameObject.transform.eulerAngles.y > 200) {
-			Bonus1.Invoke ();
+			Bonus2.Invoke ();
 			DebugResult = 2;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 315 && rPointerParent.gameObject.transform.eulerAngles.x < 360 && rPointerParent.gameObject.transform.eulerAngles.y > 200) {
@@ -83,19 +83,19 @@ public class SpiderManager : MonoBehaviour
 			DebugResult = 4;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 270 && rPointerParent.gameObject.transform.eulerAngles.x < 315 && rPointerParent.gameObject.transform.eulerAngles.y < 200) {
-			Bonus7.Invoke ();
+			Bonus5.Invoke ();
 			DebugResult = 5;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 315 && rPointerParent.gameObject.transform.eulerAngles.x < 360 && rPointerParent.gameObject.transform.eulerAngles.y < 200) {
-			Bonus8.Invoke ();
+			Bonus6.Invoke ();
 			DebugResult = 6;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 0 && rPointerParent.gameObject.transform.eulerAngles.x < 45 && rPointerParent.gameObject.transform.eulerAngles.y < 200) {
-			Bonus5.Invoke ();
+			Bonus7.Invoke ();
 			DebugResult = 7;
 		}
 		if (rPointerParent.gameObject.transform.eulerAngles.x > 45 && rPointerParent.gameObject.transform.eulerAngles.x < 90 && rPointerParent.gameObject.transform.eulerAngles.y < 200) {
-			Bonus6.Invoke ();
+			Bonus8.Invoke ();
 			DebugResult = 8;
 		}
 
