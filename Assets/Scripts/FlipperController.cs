@@ -29,12 +29,20 @@ public class FlipperController : MonoBehaviour {
         {
             _rbL.DORotate(new Vector3(0, maxAngle, 0), 1f / force).OnComplete(() => _rbL.DORotate(new Vector3(0, minAngle, 0), 1f / force));
         }
+        
+        if (Input.GetButtonUp("Left"))
+        {
+            _rbL.DORotate(new Vector3(0, minAngle, 0), 1f / force);
+        }
 
         if (Input.GetButton("Right"))
         {
             _rbR.DORotate(new Vector3(0, -maxAngle + 180, 0), 1f / force).OnComplete(() => _rbR.DORotate(new Vector3(0, -minAngle + 180, 0), 1f / force));
         }
-
-
-	}
+        
+        if (Input.GetButtonUp("Right"))
+        {
+            _rbR.DORotate(new Vector3(0, -minAngle + 180, 0), 1f / force);
+        }
+    }
 }
