@@ -21,6 +21,8 @@ public class JesusMayaManager : MonoBehaviour
     private bool SacrificeTime = true;
     private float NbSacri = 0;
 
+    public event Action RespawnBall;
+
     // Use this for initialization
     void Start()
     {
@@ -62,6 +64,7 @@ public class JesusMayaManager : MonoBehaviour
         if (Malediction != null)
         {
             Malediction();
+            RespawnBall();
         }
         else
         {

@@ -51,7 +51,7 @@ public class ChestManager : MonoBehaviour
         }
 
     }
-
+  
    
     void OnCollisionEnter(Collision collision)
     {
