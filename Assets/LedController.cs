@@ -5,13 +5,11 @@ using UnityEngine;
 public class LedController : MonoBehaviour {
 
     private bool isOn = false;
-    public Sprite on;
-    public Sprite off;
-    private SpriteRenderer rdr;
+    private MeshRenderer mesh;
 
 
     void Awake() {
-        rdr = GetComponent<SpriteRenderer>();
+        mesh = GetComponent<MeshRenderer>();
     }
 
     // Use this for initialization
@@ -21,11 +19,11 @@ public class LedController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (isOn && rdr.sprite == off) {
-            rdr.sprite = on;
+        if (isOn) {
+            mesh.materials[0].color = Color.red;
         }
-        if (!isOn && rdr.sprite == on) {
-            rdr.sprite = off;
+        if (!isOn) {
+            mesh.materials[0].color = Color.black;
         }
     }
 

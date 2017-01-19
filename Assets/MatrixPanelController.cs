@@ -6,9 +6,9 @@ public class MatrixPanelController : MonoBehaviour {
 
     public GameObject prefabLed;
     private LedController[,] leds;
-    private string line1 = "MAYA";
+    private string line1 = " * > Maya > *";
     private string line2 = "";
-    private string nextLine1 = "CREDITS : 0";
+    private string nextLine1 = "<> *<* >*< * >*";
     private string nextLine2 = "";
     public float resetCooldown = 1.0f;
     private float actualCooldown;
@@ -19,7 +19,8 @@ public class MatrixPanelController : MonoBehaviour {
         leds = new LedController[100, 12];
         for (int j = 0; j < 12; j++) {
             for (int i = 0; i < 100; i++) {
-                var tmp = Instantiate(prefabLed, new Vector3(0.1f * i, 0.1f * j), Quaternion.identity);
+                var tmp = Instantiate(prefabLed, new Vector3(this.transform.position.x + 0.2f * (i - 50), this.transform.position.y + 0.2f * (j - 6)), Quaternion.identity);
+                tmp.transform.parent = this.gameObject.transform;
                 leds[i, j] = tmp.GetComponent<LedController>();
             }
         }
