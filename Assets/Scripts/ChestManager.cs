@@ -44,6 +44,10 @@ public class ChestManager : MonoBehaviour
             {
                 EventCoffre();
             }
+            else
+            {
+                Debug.Log("Il n'esiste pas de EventCoffre");
+            }
         }
 
     }
