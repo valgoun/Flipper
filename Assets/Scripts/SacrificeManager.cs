@@ -28,9 +28,7 @@ public class SacrificeManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
             Nb_Sacrifice = Nb_Sacrifice + 1;
-            RespawnBall();
         }
     }
 }

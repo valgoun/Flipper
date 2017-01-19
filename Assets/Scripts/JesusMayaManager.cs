@@ -77,8 +77,8 @@ public class JesusMayaManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(other.gameObject);
-            if (NumberOfSacrif == 0) { MaledictionComming(); } else { SacrificeOn = true; }
+            if (NumberOfSacrif == 0) { MaledictionComming(); } else { SacrificeOn = true; Destroy(other.gameObject);
+            }
         }
     }
 
