@@ -51,7 +51,7 @@ public class InterruptTunnel : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("ball"))
+        if (collision.gameObject.tag.Equals("Player"))
         {
             isActif = !isActif;
             if (isActif)

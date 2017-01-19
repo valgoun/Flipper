@@ -24,9 +24,9 @@ public class Tunnel : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("ball") && open)
+        if (other.tag.Equals("Player") && open)
         {
-            if(Mathf.Abs(other.transform.position.x - transform.position.x) < 0.1 && Mathf.Abs(other.transform.position.z - transform.position.z) < 0.1)
+            if(Mathf.Abs(other.transform.position.x - transform.position.x) < 0.9 && Mathf.Abs(other.transform.position.z - transform.position.z) < 0.9)
             {
                 Rigidbody rigi = other.GetComponent<Rigidbody>();
                 rigi.velocity = Vector3.zero;
