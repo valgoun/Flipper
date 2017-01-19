@@ -19,8 +19,11 @@ public class MatrixPanelController : MonoBehaviour {
         leds = new LedController[100, 12];
         for (int j = 0; j < 12; j++) {
             for (int i = 0; i < 100; i++) {
-                var tmp = Instantiate(prefabLed, new Vector3(this.transform.position.x + 0.2f * (i - 50), this.transform.position.y + 0.2f * (j - 6)), Quaternion.identity);
+                var tmp = Instantiate(prefabLed, new Vector3(this.transform.localPosition.x + 0.2f * (i - 50), this.transform.localPosition.y + 0.2f * (j - 6), this.transform.localPosition.z), Quaternion.identity);
                 tmp.transform.parent = this.gameObject.transform;
+                var pos = tmp.transform.localPosition;
+                pos.z = 0;
+                tmp.transform.localPosition = pos;
                 leds[i, j] = tmp.GetComponent<LedController>();
             }
         }
